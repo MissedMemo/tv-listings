@@ -1,9 +1,15 @@
-import {expect} from 'chai';
+import React from 'react';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
+
 import App from '../../src/components/app';
 
 describe( 'Main Layout:', () => {
   
-  it( 'should display a valid mocha test result', () => {
-    expect( 1 + 1 ).to.equal(2);
+  it( 'should display passed greeting', () => {
+    const wrapper = shallow( <App greeting='hi' /> );
+    const greeting = wrapper.find('.greeting');
+    expect( greeting.text() ).to.equal('hi');
   });
+
 });
