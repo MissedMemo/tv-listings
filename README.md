@@ -1,6 +1,6 @@
-## T.V. Listings Schedule Demo
+## T.V. Listings Schedule Coding Challenge
 
-####a React/node SPA referencing several public TV listing APIs
+####Create a TV listings schedule SPA, pulling data from any public API
 
 [(someLink).herokuapp.com](http://example.com)
 
@@ -38,10 +38,12 @@
 - [tvmaze.com](http://www.tvmaze.com/schedule): Simple, clean. Not polished in the sense of shiny clickable elements, but reflecting good basic UI design (appropriate font size, vertically-centered text, color & contrast...)
 
 
-####survey available listing APIs
-- KQED
-- TV Guide
-- etc.
+####evaluate available listing APIs
+- [NPR](http://www.npr.org/api/inputReference.php) (link provided with challenge instructions):
+- [Public Media Platform](http://publicmediaplatform.org/about/content/) (linked in challenge doc):
+- [PBS (COVE API)](https://projects.pbs.org/confluence/display/coveapi/COVE+API+Version+1) (linked in challenge doc): Requires sending email to request an access code, with response promised 'in 48 hours'. [node module from KQED](https://github.com/KQED/cove-api) simplifies query code.
+- [tvmedia API](https://developer.tvmedia.ca/):
+- [tvmaze API](http://www.tvmaze.com/api): Extremely simple, with no setup required, but limited feature set for the free version, and unknown ongoing support once the paid version comes online (next week).
 
 ####edit readme as a 'ToDo' list, and to promote concurrent documentation/development
 
