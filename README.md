@@ -56,9 +56,8 @@
 - add basic test support (maintain TDD discipline as much as is practical)
 
 ####Notes:
-````
-1) If we were not using ES6 in our node server code and in webpack.config, we might just check an optimized version of bundle.js (generated via webpack -p) into github and allow the bundle to be pushed to Heroku 
-````
+
+>Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with the source pushed to github and Heroku. Instead, we're using a post-build step (defined in package.json) to re-build the bundle on Heroku. This requires babel and webpack modules to be regular dependencies instead of dev-dependencies -- also required to support the use of ES6 syntax in our node server code.
 
 ###3) Sketch out desired feature set, UIX, and tech. stack
 (expect to implement a limited subset in time available)
