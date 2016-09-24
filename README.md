@@ -24,7 +24,7 @@
 
 ###1) Initial Research:
 
-####quick impressions of existing online listing features sets and UIX
+####review existing online listing services feature sets and UIX
 - [KQED](http://www.kqed.org/tv/schedules/daily/): Aesthetically bland; a somewhat "busy" UI with many onscreen elements, and some nav features appended as sidebar elements rather than integrated into the UI. Looks better when you select 'Hide Details' -- a better default? Program codes exposed -- what use?
 - [TV Guide](http://www.tvguide.com/listings/): Still fairly bland. Supports the ability to define a personal watch list
 - [Titan TV](http://titantv.com/): Painful color scheme
@@ -45,15 +45,23 @@
 - [tvmedia API](https://developer.tvmedia.ca/):
 - [tvmaze API](http://www.tvmaze.com/api): Extremely simple, with no setup required, but limited feature set for the free version, and unknown ongoing support once the paid version comes online (next week).
 
-####edit readme as a 'ToDo' list, and to promote concurrent documentation/development
 
 ###2) Create "walking skeleton" SPA shell:
-- basic React client, with node server, hosted on Heroku
-- ajax requests to retrieve listing data using simplest public API
-- maintain TDD discipline as much as is practical
+  &nbsp;&nbsp;&#10004;&nbsp;
+  create readme to support concurrent documentation and development
+  <br>&nbsp;&nbsp;&#10004;&nbsp;
+  basic React client, with node server, hosted on Heroku
+
+- issue ajax requests to retrieve listing data using simplest public API
+- add basic test support (maintain TDD discipline as much as is practical)
+
+####Notes:
+````
+1) If we were not using ES6 in our node server code and in webpack.config, we might just check an optimized version of bundle.js (generated via webpack -p) into github and allow the bundle to be pushed to Heroku 
+````
 
 ###3) Sketch out desired feature set, UIX, and tech. stack
-(expect to implement some limited subset in time available)
+(expect to implement a limited subset in time available)
 
 ###4) Conduct offline "spikes", to explore specific tech. issues
 - user login/authorization
