@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "babel-node server"
+    "start": "webpack -d && babel-node server"
   },
   "dependencies": {
     "express": "^4.14.0",
