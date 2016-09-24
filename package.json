@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "webpack -d && babel-node server"
+    "start": "webpack -d && babel-node server",
+    "test": "mocha test/* --require babel-core/register"
   },
   "dependencies": {
     "express": "^4.14.0",
