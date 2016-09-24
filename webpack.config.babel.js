@@ -1,14 +1,18 @@
+import path from 'path';
+
+const SOURCE_DIR = path.resolve( __dirname, 'src' );
+const OUTPUT_DIR = path.resolve( __dirname, 'public' );
 
 export default {
-  entry: './src',
+  entry: SOURCE_DIR,
   output: {
-    path: 'public',
+    path: OUTPUT_DIR,
     filename: 'bundle.js'
   },
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      include: __dirname + '/src',
+      include: SOURCE_DIR,
       loader: 'babel'
     }]
   },

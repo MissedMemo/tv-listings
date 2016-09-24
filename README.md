@@ -25,7 +25,7 @@
 ###1) Initial Research:
 
 ####quick impressions of existing online listing features sets and UIX
-- [KQED](http://www.kqed.org/tv/schedules/daily/): Aesthetically bland; a fairly "busy" UI consisting of many tiny onscreen elements, with some nav elements awkwardly embedded in sidebar sections rather than integrated into the UI. Hiding details improves the view -- better as the default? Program codes exposed with no apparent purpose.
+- [KQED](http://www.kqed.org/tv/schedules/daily/): Aesthetically bland; a somewhat "busy" UI with many onscreen elements, and some nav features appended as sidebar elements rather than integrated into the UI. Looks better when you select 'Hide Details' -- a better default? Program codes exposed -- what use?
 - [TV Guide](http://www.tvguide.com/listings/): Still fairly bland. Supports the ability to define a personal watch list
 - [Titan TV](http://titantv.com/): Painful color scheme
 - [zap2it](http://tvschedule.zap2it.com/tvlistings/ZCGrid.do): Bland. Excess white space and tiny font gives a (false) impression of limited listings
