@@ -2,7 +2,7 @@
 
 ####Create a TV listings schedule SPA, pulling data from any public API
 
-###hosted at: &nbsp; [tv.listings.herokuapp.com](http://tv.listings.herokuapp.com)
+###hosted at: &nbsp; [tv-listings.herokuapp.com](http://tv-listings.herokuapp.com)
 
 ###Tech. Stack:
 - Javascript ES6
