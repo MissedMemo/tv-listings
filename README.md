@@ -2,7 +2,7 @@
 
 ####Create a TV listings schedule SPA, pulling data from any public API
 
-[(someLink).herokuapp.com](http://example.com)
+###hosted at: &nbsp; [tv.listings.herokuapp.com](http://tv.listings.herokuapp.com)
 
 ###Tech. Stack:
 - Javascript ES6
@@ -48,19 +48,21 @@
 
 ###2) Create "walking skeleton" SPA shell:
   &nbsp;&nbsp;&#10004;&nbsp;
-  create readme to support concurrent documentation and development
+  create readme to promote concurrent documentation during development
   <br>&nbsp;&nbsp;&#10004;&nbsp;
-  basic React client, with node server, hosted on Heroku
-
+  create a generic React client & node server, hosted on Heroku
+  <br>&nbsp;&nbsp;&#10004;&nbsp;
+  add basic test support (maintain TDD discipline as much as is practical)
+  
+- implement UI shell, with basic page nav. & place-holder divs styled with Less
 - issue ajax requests to retrieve listing data using simplest public API
-- add basic test support (maintain TDD discipline as much as is practical)
 
 ####Notes:
 
->Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with the source pushed to github and Heroku. Instead, we're using a post-build step (defined in package.json) to re-build the bundle on Heroku. This requires babel and webpack modules to be regular dependencies instead of dev-dependencies -- also required to support the use of ES6 syntax in our node server code.
+>Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with the source pushed to github and Heroku. Instead, we're using a post-build step (defined in package.json) to re-build the bundle on Heroku. This requires babel and webpack modules to be regular dependencies instead of dev-dependencies -- also needed in order to babel-ify our ES6 node server code.
 
-###3) Sketch out desired feature set, UIX, and tech. stack
-(expect to implement a limited subset in time available)
+###3) Plan desired feature set, UIX, and expected tech. stack
+(expect to implement a limited subset in the time available)
 
 ###4) Conduct offline "spikes", to explore specific tech. issues
 - user login/authorization
