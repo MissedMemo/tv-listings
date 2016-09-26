@@ -3,7 +3,7 @@
     "start-dev": "webpack -d && babel-node server",
     "start": "webpack -p && babel-node server",
     "heroku-postbuild": "webpack -p",
-    "test": "mocha test/* --require babel-core/register"
+    "test": "mocha test/* --require babel-core/register --require ignore-styles"
   },
   "dependencies": {
     "babel-cli": "^6.14.0",
@@ -22,7 +22,9 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "classnames": "^2.2.5",
     "enzyme": "^2.4.1",
+    "ignore-styles": "^5.0.1",
     "react-addons-test-utils": "^15.3.2"
   }
 }
