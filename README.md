@@ -9,7 +9,7 @@
 * ReactJS & Redux
 * react router
 * webpack
-* Less (CSS preprocessor)
+* CSS Modules, PostCSS
 * Mocha/Chai/Enzyme (unit testing)
 * Axios & redux-thunk (remote comms)
 * node/Express server
@@ -53,12 +53,14 @@
   <br>&nbsp;&nbsp;&#10004;&nbsp;
   add basic test support (maintain TDD discipline as much as is practical)
   
-* implement UI shell, with basic page nav. & place-holder divs, styled with Less
-* issue ajax requests to retrieve listing data using simplest public API
+* implement UI shell, with basic page nav. & place-holder divs
+* issue ajax requests to retrieve listing data using simplest available API
 
 ####Notes:
 
->Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with the source pushed to github and Heroku. Instead, we're using a post-build step (defined in package.json) to re-build the bundle on Heroku. This requires babel and webpack modules to be regular dependencies instead of dev-dependencies -- also needed in order to babel-ify our ES6 node server code.
+> Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with the source pushed to github and Heroku. Instead, we're using a post-build step (defined in package.json) to re-build JS and CSS bundles on Heroku. This requires babel, webpack, and supporting modules to be regular dependencies instead of dev-dependencies -- babel is also required in order to run our ES6 node server code.
+
+> We use CSS Modules and PostCSS, which are increasingly popular cutting edge techniques to help manage, and maximize the effectiveness of styles. Additionally, we extract hashed ids to a separate file, use a combination of 'ignore-styles' and 'classnames' modules to enable tests to continue to work with hashed class names, and rely on autoprefix to provide support for modern features like flexbox in earlier generation browsers. 
 
 ###3) Plan desired feature set, UIX, and expected tech. stack
 (expect to implement a limited subset in the time available)
