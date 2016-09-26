@@ -1,4 +1,5 @@
 import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const SOURCE_DIR = path.resolve( __dirname, 'src' );
 const OUTPUT_DIR = path.resolve( __dirname, 'public' );
@@ -18,11 +19,14 @@ export default {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules!postcss-loader'
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules!postcss-loader')
       }
     ]
   },
   resolve: {
     extensions: [ '', '.js', '.jsx', '.css' ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin( 'bundle.css' )
+  ]
 };
