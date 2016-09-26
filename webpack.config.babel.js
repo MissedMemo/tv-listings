@@ -10,13 +10,19 @@ export default {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      include: SOURCE_DIR,
-      loader: 'babel'
-    }]
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        include: SOURCE_DIR,
+        loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules!postcss-loader'
+      }
+    ]
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx' ]
+    extensions: [ '', '.js', '.jsx', '.css' ]
   }
 };

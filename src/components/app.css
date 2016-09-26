@@ -1,0 +1,6 @@
+@value muted-blue, lighter-green from '../_shared/colors.css';
+
+.greeting {
+  color: lighter-green;
+  background-color: muted-blue;
+};
