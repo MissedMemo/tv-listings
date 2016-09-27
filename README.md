@@ -60,7 +60,9 @@
 
 > Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with files pushed to github. To avoid checking compiled resources into source control, we use a post-build step (defined in package.json) to re-generate JS and CSS bundles on Heroku. This requires babel, webpack, and supporting modules to be defined as regular dependencies instead of dev-dependencies -- babel is also required in order to run our ES6 node server code.
 
-> We use CSS Modules and PostCSS, which are increasingly popular cutting edge techniques to help manage, and maximize the effectiveness of styles. Additionally, we extract hashed ids to a separate file, use a combination of 'ignore-styles' and 'classnames' modules to enable tests to continue to work with hashed class names, and rely on autoprefix to support modern features like flexbox in older browsers. 
+> We use CSS Modules and PostCSS, which are increasingly popular cutting edge techniques to help manage, and maximize the effectiveness of styles. Additionally, we extract hashed ids to a separate file, use a combination of 'ignore-styles' and 'classnames' modules to enable tests to continue to work with hashed class names, and rely on autoprefix to support modern features like flexbox in older browsers.
+
+> We first block out the UI using simple html/css files, relying on the ['Asparin-C' color scheme](https://color.adobe.com/explore/most-popular/?time=all), and lorem-ipsum placeholder text, and then re-implement as React components.
 
 ###3) Plan desired feature set, UIX, and expected tech. stack
 (expect to implement a limited subset in the time available)
