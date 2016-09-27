@@ -1,5 +1,6 @@
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import autoprefixer from 'autoprefixer';
 
 const SOURCE_DIR = path.resolve( __dirname, 'src' );
 const OUTPUT_DIR = path.resolve( __dirname, 'public' );
@@ -28,5 +29,8 @@ export default {
   },
   plugins: [
     new ExtractTextPlugin( 'bundle.css' )
-  ]
+  ],
+  postcss: function () {
+    return [autoprefixer];
+  }
 };

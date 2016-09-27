@@ -3,4 +3,5 @@
 .greeting {
   color: lighter-green;
   background-color: muted-blue;
+  display: flex;
 };
