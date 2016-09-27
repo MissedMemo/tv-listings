@@ -62,7 +62,7 @@
 
 > We use CSS Modules and PostCSS, which are increasingly popular cutting edge techniques to help manage, and maximize the effectiveness of styles. Additionally, we extract hashed ids to a separate file, use a combination of 'ignore-styles' and 'classnames' modules to enable tests to continue to work with hashed class names, and rely on autoprefix to support modern features like flexbox in older browsers.
 
-> We first block out the UI using simple html/css files, relying on the ['Asparin-C' color scheme](https://color.adobe.com/explore/most-popular/?time=all), and lorem-ipsum placeholder text, and then re-implement as React components.
+> We first work out UI element placement and sizing using div blocks and lorem-ipsum placeholder text in separate html/css files before re-implementing as React components in our project. We chose the ['Asparin-C' color scheme](https://color.adobe.com/explore/most-popular/?time=all) from an online Adobe resource.
 
 ###3) Plan desired feature set, UIX, and expected tech. stack
 (expect to implement a limited subset in the time available)
