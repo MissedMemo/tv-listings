@@ -38,7 +38,7 @@ jspm_packages
 
 # Other
 build/
+bundle.*
 dist/
 .DS_Store
-bundle.js
 *.map
