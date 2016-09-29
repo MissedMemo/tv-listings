@@ -6,3 +6,15 @@
   background-color: purple-gray;
   color: dirty-white;
 }
+
+.logo {
+  display: inline-block;
+  font-size: 3.375rem;
+  font-style: italic;
+  margin-left: 2rem;
+  margin-top: 1.25rem;
+}
+
+.logo em {
+  color: #EB7F00;
+}
