@@ -1,0 +1,8 @@
+@value purple-gray, dirty-white from '../_shared/colors.css';
+
+.header {
+  position: relative;
+  height: 7.5rem;
+  background-color: purple-gray;
+  color: dirty-white;
+}

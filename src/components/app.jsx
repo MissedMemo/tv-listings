@@ -1,9 +1,6 @@
 import React from 'react';
-import classnames from 'classnames/bind';
-import style from './app.css';
+import Header from './header';
 
-let cx = classnames.bind(style);
-
-export default ({greeting}) => <div className={ cx('greeting') }>
-  { greeting }
+export default () => <div>
+  <Header />
 </div>;

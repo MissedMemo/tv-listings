@@ -25,7 +25,7 @@ export default {
     ]
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx', '.css' ]
+    extensions: [ '', '.js', '.jsx' ]
   },
   plugins: [
     new ExtractTextPlugin( 'bundle.css' )

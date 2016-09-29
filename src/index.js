@@ -3,6 +3,6 @@ import {render} from 'react-dom';
 import App from './components/app';
 
 render(
-  <App greeting='Hello, React!' />,
+  <App />,
   document.getElementById('root')
 );
