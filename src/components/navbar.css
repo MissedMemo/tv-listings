@@ -1,0 +1,22 @@
+
+.navlink {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ACF0F2;
+  letter-spacing: .1em;
+  font-size: 1.125rem;
+  padding: .3em .5em;
+  margin-right: .25em;
+  background-color: #2f74a3;
+  color: #F3FFE2;
+}
+
+.navlink:hover,
+.navlink:focus {
+  background-color: #3e82b2;
+  color: white;
+}
+
+.navlink:focus {
+  border-top: solid .2125em #EB7F00;
+}
