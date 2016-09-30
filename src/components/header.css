@@ -1,20 +1,49 @@
-@value purple-gray, dirty-white from '../_shared/colors.css';
+@value purple-gray, offwhite, highlight, white-50, white-75 from '../_shared/colors.css';
 
 .header {
-  position: relative;
   height: 7.5rem;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: purple-gray;
-  color: dirty-white;
+  color: offwhite;
+}
+
+.attention {
+  display: flex;
+  height: 80%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  display: inline-block;
   font-size: 3.375rem;
   font-style: italic;
-  margin-left: 2rem;
-  margin-top: 1.25rem;
+  margin-left: 1rem;
 }
 
 .logo em {
-  color: #EB7F00;
+  color: highlight;
+}
+
+.tagline {
+  color: white-50;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.infobar {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.infolink {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white-50;
+  letter-spacing: .1em;
+}
+
+.infolink:hover {
+  color: white-75;
 }
