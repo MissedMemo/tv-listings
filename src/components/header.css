@@ -1,6 +1,7 @@
 @value purple-gray, offwhite, highlight, white-50, white-75 from '../_shared/colors.css';
 
 .header {
+  position: relative;
   height: 7.5rem;
   background-color: purple-gray;
   color: offwhite;
@@ -55,4 +56,13 @@
 
 .infolink:hover {
   color: white-75;
+}
+
+.searchbar {
+  position: absolute;
+  right: .875rem;
+  bottom: .5em;
+  background-color: #225378;
+  border: solid 1px rgba(255,255,255,0.5);
+  border-radius: 3px;
 }

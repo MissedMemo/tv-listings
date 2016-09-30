@@ -1,0 +1,41 @@
+.searchbar input[type='text'] {
+  width: 15em;
+  font-size: 1.2rem;
+  margin-left: .5em;
+  background-color: transparent;
+  color: rgba(255,255,255,0.5);
+  border: none;
+}
+
+.searchbar input[type='text']:focus {
+  outline: 0; /* kill glowing border during editing */
+}
+
+.searchbar button {
+  font-size: 1.2rem;
+  background-color: #2f74a3;
+  border: none;
+}
+
+.magnifyingglass {
+  font-size: 1.5em;
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border: 0.1em solid #F3FFE2;
+  position: relative;
+  border-radius: 0.35em;
+}
+
+.magnifyingglass::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -0.25em;
+  bottom: -0.1em;
+  border-width: 0;
+  background: #F3FFE2;
+  width: 0.35em;
+  height: 0.08em;
+  transform: rotate(45deg);
+}
