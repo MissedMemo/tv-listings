@@ -1,12 +1,16 @@
 /*******************************************
-  IMPORTANT: Our own project-specific root
-             values appended at bottom!
 
-  remaining (actual reset code) from...
+  Combines standard css 'reset' with
+  project-specific root element styles.
 
-     http://meyerweb.com/eric/tools/css/reset/ 
-     v2.0 | 20110126
-     License: none (public domain)
+  Reset code sourced from...
+
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+
+  Our own project-specific settings are
+  appended near the bottom of the file
 
 ********************************************/
 
