@@ -1,28 +1,29 @@
-@value purple-gray, offwhite, highlight, white-50, white-75 from '../_shared/colors.css';
+@value purple-gray, beige, highlight, black-20, white-50, white-75 from '../_shared/colors.css';
 
 .header {
   position: relative;
   height: 7.5rem;
   background-color: purple-gray;
-  color: offwhite;
+  color: beige;
+}
+
+.row {
+  display: flex;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .row1 {
-  display: flex;
+  composes: row;
   height: 85%;
-  padding-left: 1em;
-  padding-right: 1em;
   justify-content: space-between;
   align-items: center;
 }
 
 .row2 {
-  display: flex;
+  composes: row;
   height: 15%;
-  padding-left: 1em;
-  padding-right: 1em;
-  justify-content: space-between;
-  background-color: rgba(0,0,0, 0.2);
+  background-color: black-20;
 }
 
 .logo {
@@ -36,6 +37,8 @@
 }
 
 .tagline {
+  margin-right: auto; /* overrides justify-content */
+  margin-left: 3.75rem;
   color: white-50;
   font-size: 1.5rem;
   font-style: italic;
@@ -43,15 +46,19 @@
 }
 
 .infobar {
-  align-self: flex-start;
+  align-self: flex-start; /* overrides align center */
   margin-top: 1rem;
 }
 
-.infolink {
+.link {
   text-decoration: none;
   text-transform: uppercase;
-  color: white-50;
   letter-spacing: .1em;
+}
+
+.infolink {
+  composes: link;
+  color: white-50;
 }
 
 .infolink:hover {
@@ -60,9 +67,9 @@
 
 .searchbar {
   position: absolute;
-  right: .875rem;
-  bottom: .5em;
-  background-color: #225378;
-  border: solid 1px rgba(255,255,255,0.5);
+  right: 1em;
+  bottom: .65em;
+  background-color: purple-gray;
+  border: solid 1px white-50;
   border-radius: 3px;
 }

@@ -1,14 +1,12 @@
+@value beige, highlight from '../_shared/colors.css';
 
 .navlink {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ACF0F2;
-  letter-spacing: .1em;
+  composes: link from './header.css';
   font-size: 1.125rem;
   padding: .3em .5em;
   margin-right: .25em;
   background-color: #2f74a3;
-  color: #F3FFE2;
+  color: beige;
 }
 
 .navlink:hover,
@@ -18,5 +16,5 @@
 }
 
 .navlink:focus {
-  border-top: solid .2125em #EB7F00;
+  border-top: solid .2125em highlight;
 }
