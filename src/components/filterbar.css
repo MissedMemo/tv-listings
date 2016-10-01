@@ -1,0 +1,18 @@
+.filterbar {
+  padding: .6em .3em .3em .3em;
+  background-color: #1695A3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+button {
+  font-size: 24px;
+  background-color: rgba(0,0,0,0.2);
+  border: none;
+}
+
+.filtersection {
+  margin-right: auto; /* overrides justify-content */
+  margin-left: 1.25em;
+}
