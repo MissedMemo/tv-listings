@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './filterbar.css';
 
 export default () => <div className={ styles.filterbar }>
-  <button>&lt;</button>
+  <button>
+    <div className={ styles.triangleleft }/>
+  </button>
   <div className={ styles.filtersection }>
     <select>
       <option value="all-types">All Program Types</option>
@@ -22,5 +24,7 @@ export default () => <div className={ styles.filterbar }>
     <input type='date' />
     <input type='time' />
   </div>
-  <button>&gt;</button>
+  <button className={ styles.next }>
+    <div className={ styles.triangleright }/>
+  </button>
 </div>;
