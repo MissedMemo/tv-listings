@@ -1,4 +1,11 @@
-@value dullwhite, purplegray-B62, white-50 from '../_shared/colors.css';
+@value dullwhite, purplegray, purplegray-B62, white-50 from '../_shared/colors.css';
+
+.searchbar {
+  margin-bottom: -.5em;
+  background-color: purplegray;
+  border: solid 1px white-50;
+  border-radius: 3px;
+}
 
 .searchbar input[type='text'] {
   width: 15em;

@@ -1,8 +1,7 @@
 @value purplegray, dullwhite, dullorange, black-20, white-50, white-75 from '../_shared/colors.css';
 
 .header {
-  position: relative;
-  height: 7.5rem;
+  padding-top: 1em;
   background-color: purplegray;
   color: dullwhite;
 }
@@ -15,39 +14,23 @@
 
 .row1 {
   composes: row;
-  height: 85%;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .row2 {
   composes: row;
-  height: 15%;
+  line-height: 3rem; /* fraction of logo, to squash height */
+  align-items: center;
+}
+
+.row3 {
+  composes: row;
+  justify-content: flex-end;
+}
+
+.row4 {
+  composes: row;
   background-color: black-20;
-}
-
-.logo {
-  font-size: 3.375rem;
-  font-style: italic;
-  margin-left: 1rem;
-}
-
-.logo em {
-  color: dullorange;
-}
-
-.tagline {
-  margin-right: auto; /* overrides justify-content */
-  margin-left: 3.75rem;
-  color: white-50;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: lighter;
-}
-
-.infobar {
-  align-self: flex-start; /* overrides align center */
-  margin-top: 1rem;
 }
 
 .link {
@@ -65,11 +48,20 @@
   color: white-75;
 }
 
-.searchbar {
-  position: absolute;
-  right: 1em;
-  bottom: .65em;
-  background-color: purplegray;
-  border: solid 1px white-50;
-  border-radius: 3px;
+.logo {
+  font-size: 3.375rem;
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.logo em {
+  color: dullorange;
+}
+
+.tagline {
+  margin-left: 3.75rem;
+  color: white-50;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: lighter;
 }

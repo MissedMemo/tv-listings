@@ -1,19 +1,18 @@
-@value purplegray, dullwhite, white-75 from '../_shared/colors.css';
+@value purplegray, purplegray-B77, black-20 from '../_shared/colors.css';
 
 .filterbar {
-  padding: .8em .3em .3em .3em;
-  background-color: purplegray;
-  border-bottom: 2px solid white;
+  padding: .6em .3em .2em .3em;
+  border-bottom: 2px solid black-20;
 }
 
 button {
   background-color: transparent;
-  color: white-75;
+  color: purplegray;
   border: none;
 }
 
 button:hover {
-  color: white;
+  color: purplegray-B77;
 }
 
 button:focus {
