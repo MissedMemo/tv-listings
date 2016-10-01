@@ -1,0 +1,6 @@
+@value greengray from '../_shared/colors.css';
+
+.footer {
+  height: 7.5rem;
+  background-color: greengray;
+}
