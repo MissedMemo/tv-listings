@@ -2,12 +2,19 @@
    https://color.adobe.com/Aspirin-C-color-theme-251864/
 */
 
-@value purple-gray:    #225378;
-@value light-bluegray: #1695A3;
-@value blue-white:     #ACF0F2;
-@value beige:          #F3FFE2;
-@value highlight:      #EB7F00;
+@value purplegray: #225378;
+@value greengray:  #1695A3;
+@value bluewhite:  #ACF0F2;
+@value dullwhite:  #F3FFE2;
+@value dullorange: #EB7F00;
 
-@value black-20        rgba(0,0,0, 0.2);
-@value white-50        rgba(255,255,255,0.5);
-@value white-75        rgba(255,255,255,0.75);
+/* variants consistent with underlying color scheme
+   '-B' suffixes = adjusted brightness eg. HS(B) values
+*/
+
+@value purplegray-B62: #2C6D9E;
+@value purplegray-B77: #3787C4;
+
+@value black-20  rgba(0,0,0, 0.2);
+@value white-50  rgba(255,255,255,0.5);
+@value white-75  rgba(255,255,255,0.75);

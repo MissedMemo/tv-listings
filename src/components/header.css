@@ -1,10 +1,10 @@
-@value purple-gray, beige, highlight, black-20, white-50, white-75 from '../_shared/colors.css';
+@value purplegray, dullwhite, dullorange, black-20, white-50, white-75 from '../_shared/colors.css';
 
 .header {
   position: relative;
   height: 7.5rem;
-  background-color: purple-gray;
-  color: beige;
+  background-color: purplegray;
+  color: dullwhite;
 }
 
 .row {
@@ -33,7 +33,7 @@
 }
 
 .logo em {
-  color: highlight;
+  color: dullorange;
 }
 
 .tagline {
@@ -69,7 +69,7 @@
   position: absolute;
   right: 1em;
   bottom: .65em;
-  background-color: purple-gray;
+  background-color: purplegray;
   border: solid 1px white-50;
   border-radius: 3px;
 }

@@ -1,9 +1,11 @@
+@value dullwhite, purplegray-B62, white-50 from '../_shared/colors.css';
+
 .searchbar input[type='text'] {
   width: 15em;
   font-size: 1.2rem;
   margin-left: .5em;
   background-color: transparent;
-  color: rgba(255,255,255,0.5);
+  color: white-50;
   border: none;
 }
 
@@ -13,7 +15,7 @@
 
 .searchbar button {
   font-size: 1.2rem;
-  background-color: #2f74a3;
+  background-color: purplegray-B62;
   border: none;
 }
 
@@ -22,7 +24,7 @@
   display: inline-block;
   width: 0.4em;
   height: 0.4em;
-  border: 0.1em solid #F3FFE2;
+  border: 0.1em solid dullwhite;
   position: relative;
   border-radius: 0.35em;
 }
@@ -34,7 +36,7 @@
   right: -0.25em;
   bottom: -0.1em;
   border-width: 0;
-  background: #F3FFE2;
+  background: dullwhite;
   width: 0.35em;
   height: 0.08em;
   transform: rotate(45deg);

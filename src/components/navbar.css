@@ -1,20 +1,20 @@
-@value beige, highlight from '../_shared/colors.css';
+@value dullwhite, purplegray-B62, purplegray-B77, dullorange from '../_shared/colors.css';
 
 .navlink {
   composes: link from './header.css';
   font-size: 1.125rem;
   padding: .3em .5em;
   margin-right: .25em;
-  background-color: #2f74a3;
+  background-color: purplegray-B62;
   color: beige;
 }
 
 .navlink:hover,
 .navlink:focus {
-  background-color: #3e82b2;
+  background-color: purplegray-B77;
   color: white;
 }
 
 .navlink:focus {
-  border-top: solid .2125em highlight;
+  border-top: solid .2125em dullorange;
 }
