@@ -19,7 +19,9 @@ export default () => <div className={ styles.header }>
     </div>
 
     <div className={ styles.tagline }>
-      "The best TV listings guide for the interwebs!"
+      <strong>&#8216;</strong>
+        The best TV listings for the interwebs!
+      <strong>&#8217;</strong>
     </div>
 
   </div>
