@@ -1,4 +1,4 @@
-@value purplegray, purplegray-B77, black-20 from '../_shared/colors.css';
+@value purplegray, purplegray-B77, black-20 from '../../_shared/colors.css';
 
 .filterbar {
   padding: .6em .3em .2em .3em;

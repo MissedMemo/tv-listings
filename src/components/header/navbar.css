@@ -1,4 +1,4 @@
-@value dullwhite, purplegray-B62, purplegray-B77, dullorange from '../_shared/colors.css';
+@value dullwhite, purplegray-B62, purplegray-B77, dullorange from '../../_shared/colors.css';
 
 .navlink {
   composes: link from './header.css';

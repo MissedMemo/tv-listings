@@ -1,4 +1,4 @@
-@value purplegray, dullwhite, dullorange, black-20, white-50, white-75 from '../_shared/colors.css';
+@value purplegray, dullwhite, dullorange, black-20, white-50, white-75 from '../../_shared/colors.css';
 
 .header {
   padding-top: 1em;

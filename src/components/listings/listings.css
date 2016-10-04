@@ -1,4 +1,4 @@
-@value dullwhite from '../_shared/colors.css';
+@value dullwhite from '../../_shared/colors.css';
 
 .listings {
   min-height: 37.5rem;

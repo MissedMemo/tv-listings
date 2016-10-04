@@ -1,4 +1,4 @@
-@value dullwhite, purplegray, purplegray-B62, white-50 from '../_shared/colors.css';
+@value dullwhite, purplegray, purplegray-B62, white-50 from '../../_shared/colors.css';
 
 .searchbar {
   margin-bottom: -.5em;
