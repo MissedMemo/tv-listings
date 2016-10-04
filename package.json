@@ -19,6 +19,7 @@
     "postcss-modules-values": "^1.2.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-router": "^4.0.0-alpha.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
   },

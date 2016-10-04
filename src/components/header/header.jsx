@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 //import classnames from 'classnames/bind';
 import SearchBar from './searchbar';
 import NavBar from './navbar';
@@ -7,9 +8,9 @@ import styles from './header.css';
 export default () => <div className={ styles.header }>
 
   <div className={ styles.row1 }>
-    <a href="#" className={ styles.infolink }>login</a>
+    <Link to='/login' className={ styles.infolink }>login</Link>
     &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
-    <a href="#" className={ styles.infolink }>about</a>
+    <Link to='/about' className={ styles.infolink }>about</Link>
   </div>
 
   <div className={ styles.row2 }>
