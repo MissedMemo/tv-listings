@@ -52,6 +52,8 @@
   font-size: 3.375rem;
   font-style: italic;
   margin-left: 1rem;
+  color: dullwhite;
+  text-decoration: none;
 }
 
 .logo em {

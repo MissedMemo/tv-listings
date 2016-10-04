@@ -1,0 +1,8 @@
+@value dullwhite from '../_shared/colors.css';
+
+.profile {
+  background-color: dullwhite;
+  min-height: 600px;
+  padding-top: 100px;
+  text-align: center;
+}

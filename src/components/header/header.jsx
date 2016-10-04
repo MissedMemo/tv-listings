@@ -15,9 +15,9 @@ export default () => <div className={ styles.header }>
 
   <div className={ styles.row2 }>
 
-    <div className={ styles.logo }>
+    <Link to='/' className={ styles.logo }>
       What's<em>On!</em>
-    </div>
+    </Link>
 
     <div className={ styles.tagline }>
       <strong>&#8216;</strong>

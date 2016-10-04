@@ -1,21 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Match, Miss, Link } from 'react-router';
+import { BrowserRouter, Match, Miss } from 'react-router';
 import Header from './header/header';
 import About from './about';
+import Login from './login';
+import Profile from './profile';
 import Listings from './listings/listings';
+import Custom from './listings/custom';
 import Footer from './footer';
-
-const Login = () => <div style='{min-height: 600px;}'>
-  This simulates our `login` page!
-</div>;
 
 export default () => <div>
   <BrowserRouter>
     <div>
       <Header />
       <Match exactly pattern='/' component={Listings} />
-      <Match exactly pattern='/about' component={About} />
-      <Match exactly pattern='/login' component={Login} />
+      <Match pattern='/about' component={About} />
+      <Match pattern='/login' component={Login} />
+      <Match pattern='/custom' component={Custom} />
+      <Match pattern='/profile' component={Profile} />
       <Footer />
     </div>
   </BrowserRouter>
