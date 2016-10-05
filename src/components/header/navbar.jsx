@@ -5,6 +5,7 @@ import styles from './navbar.css';
 
 let cx = classnames.bind(styles);
 
+{/* NavBar must also set/store active route (selected <Link>) */}
 
 export default class NavBar extends Component {
 
@@ -15,25 +16,28 @@ export default class NavBar extends Component {
   }
 
   select( href ) {
-    let route = href.substr( href.lastIndexOf('/') );
-    this.setState({ activeRoute: route });
+    let activeRoute = href.substr( href.lastIndexOf('/') );
+    this.setState({ activeRoute });
   }
 
   render() {
-    let current = this.state.activeRoute;
+    let activeRoute = this.state.activeRoute;
     return <div className={ styles.navbar }
-      onClick={ (e) => this.select(e.target.href) } >
-      <NavLink route='/' active={current} >programs</NavLink>
-      <NavLink route='/custom' active={current}>my schedule</NavLink>
-      <NavLink route='/profile' active={current}>profile</NavLink>
+      onClick={ e => this.select(e.target.href) } >
+      <NavLink route='/' current={activeRoute} >programs</NavLink>
+      <NavLink route='/custom' current={activeRoute}>my schedule</NavLink>
+      <NavLink route='/profile' current={activeRoute}>profile</NavLink>
     </div>
   }
   
 }
 
+
+{/* <Link> wrapper handles selection state  */}
+
 const NavLink = (props) => (
   <Link to={props.route} 
-    className={ cx('navlink',{'selected': props.active === props.route}) >
-    {props.children}
+    className={ cx('navlink',{'selected': props.current === props.route}) }>
+    { props.children }
   </Link>
 );
