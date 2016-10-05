@@ -1,8 +1,30 @@
 @value dullwhite from '../_shared/colors.css';
 
-.login {
+.overlay {
+  background-color: rgba(0,0,0,0.2);
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay form {
+  position: fixed;
+  width: 30rem;
+  height: 20rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  padding-top: 1em;
   background-color: dullwhite;
-  min-height: 600px;
-  padding-top: 100px;
-  text-align: center;
+  border-radius: 8px;
+}
+
+.overlay form input,
+.overlay form button {
+  font-size: 1.125rem;
+  width: 80%;
+  padding: .25em;
+  display: block;
+  margin: 0 auto .5em auto;
+  border-radius: 5px;
 }

@@ -11,10 +11,10 @@ import Footer from './footer';
 export default () => <div>
   <BrowserRouter>
     <div>
+      <Match pattern='/login' component={Login} />
       <Header />
       <Match exactly pattern='/' component={Listings} />
       <Match pattern='/about' component={About} />
-      <Match pattern='/login' component={Login} />
       <Match pattern='/custom' component={Custom} />
       <Match pattern='/profile' component={Profile} />
       <Footer />
