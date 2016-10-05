@@ -10,11 +10,11 @@
 }
 
 .navlink:hover,
-.navlink:focus {
+.navlink.selected {
   background-color: purplegray-B77;
   color: white;
 }
 
-.navlink:focus {
+.navlink.selected {
   border-top: solid .15em dullorange;
 }

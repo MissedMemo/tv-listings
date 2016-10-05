@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-//import classnames from 'classnames/bind';
 import SearchBar from './searchbar';
 import NavBar from './navbar';
 import styles from './header.css'; 
