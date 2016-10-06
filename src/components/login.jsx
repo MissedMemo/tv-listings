@@ -10,17 +10,17 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: false
+      hidden: true
     }
-    this.visibilityToggle = this.visibilityToggle.bind(this);
+    this.toggleVisibility = this.toggleVisibility.bind(this);
 
     // ONE listener for ALL clicks (filter for login toggle elements)
     document.body.addEventListener(
-      'click', this.visibilityToggle, false
+      'click', this.toggleVisibility, false
     );
   }
 
-  visibilityToggle( e ) {
+  toggleVisibility( e ) {
 
     // Ignore elements not tagged with `toggle` attributes
 
@@ -28,18 +28,18 @@ export default class Login extends Component {
 
       e.preventDefault();
 
-      if( !this.state.isVisible )
-        document.body.classList.add('disable-scrolling');
-      else
-        document.body.classList.remove('disable-scrolling');
-
-      this.setState({ isVisible: !this.state.isVisible });
+      this.setState({ hidden: !this.state.hidden }, () => {
+        if( this.state.hidden )
+          document.body.classList.remove('disable-scrolling');
+        else
+          document.body.classList.add('disable-scrolling');          
+      });
     }
   }
 
   render() {
     return <div className={
-        cx('overlay',{'hidden': !this.state.isVisible})
+        cx('overlay',{'hidden': this.state.hidden})
       }>
       <form>
         <input type='text' placeholder='user name' />
