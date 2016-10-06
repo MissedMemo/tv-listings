@@ -5,7 +5,19 @@
   background-color: dullwhite;
 }
 
-.listings .message {
-  text-align: center;
-  padding-top: 60px;
+.listings .program {
+  /*padding: 1em;*/
+  margin: 1em 2em;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.program .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: indigo;
+}
+
+.program .desc {
+  padding: 1em 0;
+  color: rgba(0,0,0,0.5);
 }
