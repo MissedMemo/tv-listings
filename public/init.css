@@ -68,3 +68,8 @@ html {
 body {
   font-family: sans-serif;
 }
+
+/* no scroll of underlying content (on modal login dialog) */
+body.disable-scrolling {
+  overflow: hidden;
+}

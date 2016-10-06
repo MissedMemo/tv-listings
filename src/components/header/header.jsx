@@ -7,7 +7,9 @@ import styles from './header.css';
 export default () => <div className={ styles.header }>
 
   <div className={ styles.row1 }>
-    <Link to='/login' className={ styles.infolink }>login</Link>
+    <a href='#' className={ styles.infolink } data-togglelogin>
+      login
+    </a>
     &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
     <Link to='/about' className={ styles.infolink }>about</Link>
   </div>
