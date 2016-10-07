@@ -28,6 +28,14 @@ export default class Listings extends Component {
       });
   }
 
+  /* Facebook's recommended approach to convert string to html
+    https://facebook.github.io/react/tips/dangerously-set-inner-html.html
+  */
+
+  extractMarkup( str ) {
+   return { __html: str };
+  }
+
   render() {
     return <div className={ styles.listings }>
       <FilterBar />
@@ -40,7 +48,11 @@ export default class Listings extends Component {
                 <div className={ styles.row1 }>
                   <div className={ styles.title }>{ show.title }</div>
                 </div>
-                <div className={ styles.desc }>{ show.description }</div>
+                <div className={ styles.desc }
+                  dangerouslySetInnerHTML={
+                    this.extractMarkup( show.description )
+                  } 
+                />
                 <div className={ styles.row3 }>
                 </div>
               </div>
