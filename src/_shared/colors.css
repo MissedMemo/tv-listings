@@ -15,6 +15,8 @@
 @value purplegray-B62: #2C6D9E;
 @value purplegray-B77: #3787C4;
 
+@value black-10  rgba(0,0,0, 0.1);
 @value black-20  rgba(0,0,0, 0.2);
+@value black-50  rgba(0,0,0, 0.5);
 @value white-50  rgba(255,255,255,0.5);
 @value white-75  rgba(255,255,255,0.75);
