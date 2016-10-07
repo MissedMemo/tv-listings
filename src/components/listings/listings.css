@@ -16,24 +16,28 @@
 
 .program .image {
   flex: 1;
-  height: 12.5rem;
+  min-width: 140px;
   background-color: lightgray;
 }
 
 .program .info {
   flex: 4;
+  height: 140px;
   margin-left: 1em;
+  display: flex;
   flex-direction: column;
-  background-color: lightblue;
+  justify-content: space-between;
 }
 
 .info .row1,
 .info .row3 {
-  background-color: lightgreen;
+  line-height: 2em;
 }
 
 .info .row2 {
-  background-color: firebrick;
+  flex: 1;
+  color: black-50;
+  overflow: hidden;
 }
 
 .info .row3 {
@@ -44,9 +48,4 @@
   font-weight: bold;
   text-transform: uppercase;
   color: purplegray;
-}
-
-.program .desc {
-  padding: .5em 0 1em 0;
-  color: black-50;
 }
