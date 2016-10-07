@@ -5,20 +5,39 @@
   background-color: dullwhite;
 }
 
-.listings .program {
-  margin: 1em 2em;
-  display: flex;
+.listings li {
+  padding: 1em 2em;
   border-bottom: 2px solid black-10;
 }
 
+.listings .program {
+  display: flex;
+}
+
 .program .image {
-  width: 300px;
-  height: 200px;
+  flex: 1;
+  height: 12.5rem;
   background-color: lightgray;
 }
 
 .program .info {
+  flex: 4;
+  margin-left: 1em;
   flex-direction: column;
+  background-color: lightblue;
+}
+
+.info .row1,
+.info .row3 {
+  background-color: lightgreen;
+}
+
+.info .row2 {
+  background-color: firebrick;
+}
+
+.info .row3 {
+  align-self: flex-end;
 }
 
 .program .title {

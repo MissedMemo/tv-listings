@@ -18,7 +18,7 @@ export default class Listings extends Component {
         /*
         console.log( 'record:', res.data[0], '(of #):', res.data.length );
         */
-        const listings = res.data.map( d =>({
+        const listings = res.data.slice(0,6).map( d =>({
           id: d.id,
           title: d.show.name,
           image: d.show.image ? d.show.image.medium || null : null,
@@ -44,18 +44,29 @@ export default class Listings extends Component {
           { this.state.listings.map( show => <li key={show.id}>
             <div className={ styles.program }>
               <div className={ styles.image } data-image={ show.image } />
-              <div className={ styles.info }>
-                <div className={ styles.row1 }>
-                  <div className={ styles.title }>{ show.title }</div>
+                <div className={ styles.info }>
+                {/*
+                  <div className={ styles.row1 }>
+                    <div className={ styles.title }>{ show.title }</div>
+                  </div>
+                  <div className={ styles.desc }
+                    dangerouslySetInnerHTML={
+                      this.extractMarkup( show.description )
+                    } 
+                  />
+                  <div className={ styles.row3 }>
+                  </div>
+                */}
+                  <div className={ styles.row1 }>
+                    row1 row1 row1 row1
+                  </div>
+                  <div className={ styles.row2 }>
+                    row2 row2 row2 row2
+                  </div>
+                  <div className={ styles.row3 }>
+                    row3 row3 row3 row3
+                  </div>
                 </div>
-                <div className={ styles.desc }
-                  dangerouslySetInnerHTML={
-                    this.extractMarkup( show.description )
-                  } 
-                />
-                <div className={ styles.row3 }>
-                </div>
-              </div>
             </div>
           </li>)}
         </ul>
