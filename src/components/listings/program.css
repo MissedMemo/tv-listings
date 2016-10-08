@@ -6,14 +6,14 @@
 }
 
 .imageFrame {
-  width: 100px;
-  padding: 2px;
+  width: 6.25rem;
+  padding: .125em;
   background-color: black;
   border-radius: 2px;
 }
 
 .imageFrame img {
-  height: 140px;
+  height: 8.75rem;
   display: block;
 }
 
@@ -26,7 +26,7 @@
 
 .info {
   flex: 1;
-  height: 140px;
+  height: 8.75rem;
   margin-left: 1em;
   display: flex;
   flex-direction: column;
