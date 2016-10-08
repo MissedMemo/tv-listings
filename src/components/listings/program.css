@@ -1,4 +1,4 @@
-@value purplegray, black-50 from '../../_shared/colors.css';
+@value purplegray, black-50, white-75 from '../../_shared/colors.css';
 
 
 .program {
@@ -6,7 +6,7 @@
 }
 
 .imageFrame {
-  min-width: 100px;
+  width: 100px;
   padding: 2px;
   background-color: black;
   border-radius: 2px;
@@ -14,8 +14,13 @@
 
 .imageFrame img {
   height: 140px;
-  display: block;
-  margin: 0 auto;
+}
+
+.imageFrame .noImageFound {
+  margin-top: 20%;
+  text-transform: capitalize;
+  color: white-75;
+  text-align: center;
 }
 
 .info {

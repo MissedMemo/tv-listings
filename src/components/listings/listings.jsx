@@ -24,7 +24,7 @@ export default class Listings extends Component {
         const listings = res.data.map( d =>({
           id: d.id,
           title: d.show.name,
-          image: d.show.image ? d.show.image.medium || null : null,
+          imageUrl: d.show.image ? d.show.image.medium || null : null,
           description: d.show.summary
         }) );
         this.setState({ listings });

@@ -13,9 +13,13 @@ const extractMarkup = ( str ) => {
 
 export default ({data}) => <div className={ styles.program }>
 
-  <div className={ styles.imageFrame }>
-    <img src={ data.image } />
-  </div>
+  <div className={ styles.imageFrame }> {
+    data.imageUrl ?
+      <img src={ data.imageUrl } /> :
+      <div className={ styles.noImageFound }>
+        no<br/><br/>image<br/><br/>available
+      </div>
+  } </div>
 
   <div className={ styles.info }>
 
