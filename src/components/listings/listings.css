@@ -14,14 +14,21 @@
   display: flex;
 }
 
-.program .image {
-  flex: 1;
-  min-width: 140px;
-  background-color: lightgray;
+.program .imageFrame {
+  min-width: 100px;
+  padding: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.imageFrame img {
+  height: 140px;
+  display: block;
+  margin: 0 auto;
 }
 
 .program .info {
-  flex: 4;
+  flex: 1;
   height: 140px;
   margin-left: 1em;
   display: flex;

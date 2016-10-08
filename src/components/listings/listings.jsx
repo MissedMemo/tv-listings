@@ -18,7 +18,7 @@ export default class Listings extends Component {
         /*
         console.log( 'record:', res.data[0], '(of #):', res.data.length );
         */
-        const listings = res.data.slice(0,6).map( d =>({
+        const listings = res.data.map( d =>({
           id: d.id,
           title: d.show.name,
           image: d.show.image ? d.show.image.medium || null : null,
@@ -43,7 +43,9 @@ export default class Listings extends Component {
         <ul>
           { this.state.listings.map( show => <li key={show.id}>
             <div className={ styles.program }>
-              <div className={ styles.image } data-image={ show.image } />
+              <div className={ styles.imageFrame }>
+                <img src={ show.image } />
+              </div>
               <div className={ styles.info }>
                 <div className={ styles.row1 }>
                   <div className={ styles.title }>{ show.title }</div>
