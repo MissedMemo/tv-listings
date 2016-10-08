@@ -3,6 +3,9 @@ import axios from 'axios'
 import FilterBar from './filterbar';
 import styles from './listings.css';
 
+import Program from './program';
+
+
 export default class Listings extends Component {
 
   constructor(props) {
@@ -28,38 +31,13 @@ export default class Listings extends Component {
       });
   }
 
-  /* Facebook's recommended approach to convert string to html
-    https://facebook.github.io/react/tips/dangerously-set-inner-html.html
-  */
-
-  extractMarkup( str ) {
-   return { __html: str };
-  }
-
   render() {
     return <div className={ styles.listings }>
       <FilterBar />
       <div>
         <ul>
           { this.state.listings.map( show => <li key={show.id}>
-            <div className={ styles.program }>
-              <div className={ styles.imageFrame }>
-                <img src={ show.image } />
-              </div>
-              <div className={ styles.info }>
-                <div className={ styles.row1 }>
-                  <div className={ styles.title }>{ show.title }</div>
-                </div>
-                <div className={ styles.row2 }
-                  dangerouslySetInnerHTML={
-                    this.extractMarkup( show.description )
-                  }
-                />
-                <div className={ styles.row3 }>
-                  row3 row3 row3 row3
-                </div>
-              </div>
-            </div>
+            <Program data={ show } />
           </li>)}
         </ul>
       </div>

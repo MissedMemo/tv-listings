@@ -1,0 +1,49 @@
+@value purplegray, black-50 from '../../_shared/colors.css';
+
+
+.program {
+  display: flex;
+}
+
+.imageFrame {
+  min-width: 100px;
+  padding: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.imageFrame img {
+  height: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.info {
+  flex: 1;
+  height: 140px;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info .row1,
+.info .row3 {
+  line-height: 2em;
+}
+
+.info .row2 {
+  flex: 1;
+  color: black-50;
+  overflow: hidden;
+}
+
+.info .row3 {
+  align-self: flex-end;
+}
+
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: purplegray;
+}

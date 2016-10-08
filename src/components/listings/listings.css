@@ -1,4 +1,4 @@
-@value purplegray, dullwhite, black-10, black-50 from '../../_shared/colors.css';
+@value dullwhite, black-10 from '../../_shared/colors.css';
 
 .listings {
   min-height: 37.5rem;
@@ -8,51 +8,4 @@
 .listings li {
   padding: 1em 2em;
   border-bottom: 2px solid black-10;
-}
-
-.listings .program {
-  display: flex;
-}
-
-.program .imageFrame {
-  min-width: 100px;
-  padding: 2px;
-  background-color: black;
-  border-radius: 2px;
-}
-
-.imageFrame img {
-  height: 140px;
-  display: block;
-  margin: 0 auto;
-}
-
-.program .info {
-  flex: 1;
-  height: 140px;
-  margin-left: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.info .row1,
-.info .row3 {
-  line-height: 2em;
-}
-
-.info .row2 {
-  flex: 1;
-  color: black-50;
-  overflow: hidden;
-}
-
-.info .row3 {
-  align-self: flex-end;
-}
-
-.program .title {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: purplegray;
 }
