@@ -62,7 +62,7 @@
 ###4A) Evolve the UI, emphasizing extensibility, relying on newer tech.
 
 * apply basic date-time filters, to display listings by day & time
-* attempt responsive design using plain Flexbox (vs. my usual Bootstrap grid approach)
+* attempt responsive design using auto-prefixed Flexbox (vs. my usual Bootstrap grid approach)
 * enable/disable controls & routes, based on login status
 * implement 'Profile' etc. supplemental pages
 
@@ -75,10 +75,14 @@
 
 ####Notes:
 
-> Simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with files pushed to github. To avoid checking compiled resources into source control, we use a post-build step (defined in package.json) to re-generate JS and CSS bundles on Heroku. This requires babel, webpack, and supporting modules to be defined as regular dependencies instead of dev-dependencies -- babel is also required in order to run our ES6 node server code.
+> The simplest option to hosting a React app. on Heroku with webpack is just to include bundle.js (minified, using webpack -p) with files pushed to github. To avoid checking compiled resources into source control, we use a post-build step (defined in package.json) to re-generate JS and CSS bundles on Heroku. This requires babel, webpack, and supporting modules to be defined as regular dependencies instead of dev-dependencies -- babel is also required in order to run our ES6 node server code.
 
 > We use CSS Modules and PostCSS, which are increasingly popular cutting edge techniques to help manage, and maximize the effectiveness of styles. Additionally, we extract hashed ids to a separate file, use a combination of 'ignore-styles' and 'classnames' modules to enable tests to continue to work with hashed class names, and rely on autoprefix to support modern features like flexbox in older browsers.
 
 > We first work out UI element placement and sizing using div blocks and lorem-ipsum placeholder text in separate html/css files before re-implementing as React components in our project. We chose the ['Asparin-C' color scheme](https://color.adobe.com/explore/most-popular/?time=all) from Adobe's online resource.
 
-> We skip using Redux until and unless it becomes necessary -- a hot topic in recent industry discussions -- and also because Redux support is still lacking under react-router 4's new, vastly-improved approach to routing.
+> We skip using Redux until and unless it becomes necessary -- [a hot topic in recent industry discussions](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.pfp91059w) -- and also because Redux support is still lacking under react-router 4's new, vastly-improved approach to routing.
+
+> Browser support for new HTML5 input types 'date' and 'time' are [virtually non-existant](http://html5doctor.com/the-woes-of-date-input/), so we're experimenting with what appears to be the most production-quality example of free 3rd party alternatives, [React widgets](http://jquense.github.io/react-widgets/docs/#/?_k=m7hgby).
+
+> There didn't seem to be any way to integrate our pop-up modal login dialog with react-router 4's view switching strategy, so we implemented it as a top-level component, toggled in response to global click events.
