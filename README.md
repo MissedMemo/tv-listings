@@ -6,18 +6,15 @@
 
 ###Tech. Stack:
 * Javascript/ES6 (babel)
-* ReactJS & Redux
-* react router
+* ReactJS
+* react router v.4 (alpha)
 * webpack
 * CSS Modules, PostCSS
 * Mocha/Chai/Enzyme (unit testing)
-* Axios & redux-thunk (remote comms)
+* Axios (remote comms)
 * node/Express server
 * hosted on Heroku
-* data sources:
-  * T.V.: [tvmaze.com](http://www.tvmaze.com/api)
-  * PBS: [COVE API](https://projects.pbs.org/confluence/display/coveapi) using KQED's [node module](https://github.com/KQED/cove-api)
-
+* data sources: [tvmaze.com](http://www.tvmaze.com/api)
 
 ##Implementation Log (strategy and outcomes):
 
@@ -38,11 +35,11 @@
 
 
 ####Evaluate available listing APIs
-* [NPR](http://www.npr.org/api/inputReference.php) (link provided with challenge instructions):
-* [Public Media Platform](http://publicmediaplatform.org/about/content/) (linked in challenge doc):
-* [PBS (COVE API)](https://projects.pbs.org/confluence/display/coveapi/COVE+API+Version+1) (linked in challenge doc): Requires sending email to request an access code, with response promised 'in 48 hours'. [node module from KQED](https://github.com/KQED/cove-api) simplifies query code.
+* [NPR](http://www.npr.org/api/inputReference.php) (link included in challenge instructions):
+* [Public Media Platform](http://publicmediaplatform.org/about/content/) (included in challenge instructions):
+* [PBS (COVE API)](https://projects.pbs.org/confluence/display/coveapi/COVE+API+Version+1) (included in challenge instructions): Requires sending email to request an access code, with response promised 'in 48 hours'. Associated [node module from KQED](https://github.com/KQED/cove-api) promises to simplify query code. UPDATE: No new access to COVE being granted, while it undergoes a rewrite
 * [tvmedia API](https://developer.tvmedia.ca/):
-* [tvmaze API](http://www.tvmaze.com/api): Extremely simple, with no setup required, but limited feature set for the free version, and unknown ongoing support once the paid version comes online (next week).
+* [tvmaze API](http://www.tvmaze.com/api): Extremely simple, with no setup required, but limited feature set for the free version, and unknown ongoing support now that a paid version has been released.
 
 
 ###2) Create "walking skeleton" SPA shell:
@@ -52,9 +49,29 @@
   create a generic React client & node server, hosted on Heroku
   <br>&nbsp;&nbsp;&#10004;&nbsp;
   add basic test support (maintain TDD discipline as much as is practical)
+  <br>&nbsp;&nbsp;&#10004;&nbsp;
+  implement UI shell, with basic page nav. & place-holder divs
+  <br>&nbsp;&nbsp;&#10004;&nbsp;
+  issue ajax requests to retrieve listing data using simplest available API
   
-* implement UI shell, with basic page nav. & place-holder divs
-* issue ajax requests to retrieve listing data using simplest available API
+
+###3) Outline expected feature set, UIX, and tech. stack
+(expect to implement a limited subset in the time available)
+
+
+###4A) Evolve the UI, emphasizing extensibility, relying on newer tech.
+
+* apply basic date-time filters, to display listings by day & time
+* attempt responsive design using plain Flexbox (vs. my usual Bootstrap grid approach)
+* enable/disable controls & routes, based on login status
+* implement 'Profile' etc. supplemental pages
+
+###4B) Conduct offline "spikes", to explore specific tech. issues
+
+* [React widgets](http://jquense.github.io/react-widgets/docs/#/?_k=m7hgby) (date-time picker etc. with cross/legacy browser support)
+* devise a paging/caching strategy -- including possible infinite scroll
+* user login/authorization
+* server-side rendering
 
 ####Notes:
 
@@ -62,16 +79,6 @@
 
 > We use CSS Modules and PostCSS, which are increasingly popular cutting edge techniques to help manage, and maximize the effectiveness of styles. Additionally, we extract hashed ids to a separate file, use a combination of 'ignore-styles' and 'classnames' modules to enable tests to continue to work with hashed class names, and rely on autoprefix to support modern features like flexbox in older browsers.
 
-> We first work out UI element placement and sizing using div blocks and lorem-ipsum placeholder text in separate html/css files before re-implementing as React components in our project. We chose the ['Asparin-C' color scheme](https://color.adobe.com/explore/most-popular/?time=all) from an online Adobe resource.
+> We first work out UI element placement and sizing using div blocks and lorem-ipsum placeholder text in separate html/css files before re-implementing as React components in our project. We chose the ['Asparin-C' color scheme](https://color.adobe.com/explore/most-popular/?time=all) from Adobe's online resource.
 
-###3) Plan desired feature set, UIX, and expected tech. stack
-(expect to implement a limited subset in the time available)
-
-###4) Conduct offline "spikes", to explore specific tech. issues
-* user login/authorization
-* server-side rendering
-
-###5) Evolve the UI, emphasizing extensibility, relying on newer tech.
-* flexbox with auto-prefix etc.
-
-
+> We skip using Redux until and unless it becomes necessary -- a hot topic in recent industry discussions -- and also because Redux support is still lacking under react-router 4's new, vastly-improved approach to routing.
