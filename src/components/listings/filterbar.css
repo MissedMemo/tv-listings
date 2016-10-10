@@ -50,3 +50,9 @@
   display: inline-block;
   margin-left: 1.25em;
 }
+
+.filterbar select {
+  border: none;
+  background-color: transparent;
+  margin-left: 1em;
+}
