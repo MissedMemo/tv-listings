@@ -1,4 +1,5 @@
 import React from 'react';
+import Datetime from 'react-datetime';
 import styles from './filterbar.css';
 
 
@@ -15,8 +16,18 @@ export default () => <div className={ styles.filterbar }>
     )}</select>
   </div>
   <div className={ styles.filtersection }>
-    <input type='date' />
-    <input type='time' />
+    <Datetime className={ styles.timepicker }
+      defaultValue={ new Date() }
+      dateFormat={ false }
+      timeFormat={ 'h:mm A' }
+      closeOnSelect = { true }
+    />
+    <Datetime className={ styles.datepicker }
+      defaultValue={ new Date() }
+      dateFormat={ 'ddd, MMM D' }
+      timeFormat={ false }
+      closeOnSelect = { true }
+    />
   </div>
   <button className={ styles.next }>
     <div className={ styles.triangleright }/>
