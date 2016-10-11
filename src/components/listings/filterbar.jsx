@@ -13,10 +13,14 @@ export default ({ settings, callback }) => (
 
     <div className={ styles.filtersection }>
       <select>{ genres.map(
-        genre => <option value={ genre.value }>{ genre.text }</option>
+        genre => <option value={ genre.value } key={ genre.value }>
+          { genre.text }
+        </option>
       )}</select>
       <select>{ types.map(
-        type => <option value={ type.value }>{ type.text }</option>
+        type => <option value={ type.value } key={ type.value }>
+          { type.text }
+        </option>
       )}</select>
     </div>
 
