@@ -7,7 +7,7 @@ import { getListings } from './datasource'; /* TODO: pass via props! */
 
 const filter = {
   datetime: new Date(),
-  genre: null
+  genre: 'All Genres'
 }
 
 export default class Listings extends Component {
