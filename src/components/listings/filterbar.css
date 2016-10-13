@@ -56,6 +56,12 @@
   margin-left: 1em;
 }
 
+/* hack centers selected element
+ (list elements inaccessible) */
+.filtersection select {
+  text-align-last: center;
+}
+
 .datepicker, .timepicker {
   display: inline-block;
   margin-left: .5em;

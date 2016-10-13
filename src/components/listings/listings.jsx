@@ -3,10 +3,11 @@ import FilterBar from './filterbar';
 import styles from './listings.css';
 
 import Program from './program';
-import { getListings } from './datasource';
+import { getListings } from './datasource'; /* TODO: pass via props! */
 
 const filter = {
-  datetime: new Date()
+  datetime: new Date(),
+  genre: null
 }
 
 export default class Listings extends Component {
@@ -50,7 +51,8 @@ export default class Listings extends Component {
 
     return <div className={ styles.listings }>
       <FilterBar
-        settings={ this.state.filter }
+        /* update (and call back with) filter CLONE! */
+        filter={ Object.assign( {}, this.state.filter ) }
         callback={ this.onFilterChange }
       />
       <div>
