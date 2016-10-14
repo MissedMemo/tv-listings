@@ -3,7 +3,7 @@ import moment from 'moment';
 
 /*
   Any benefits to encapsulating all this in an ES6 class?
-  (As an ES6 module, contents are already inaccessible)
+  (As an ES6 module, this file's contents already inaccessible)
 */
 
 const categories = {
@@ -45,7 +45,7 @@ export const getListings = ( filter ) => {
 
   const date = moment(filter.datetime).startOf('date');
 
-  if( date.isSame( listings.date ) ) {
+  if( date.isSame( listings.date ) ) { // use CACHED DATA!
     return new Promise( function( fullfil, reject ) {
       fullfil( filtered( listings.data, filter ) );
     });
@@ -59,7 +59,7 @@ export const getListings = ( filter ) => {
 
       listings.data = res.data.map( d => {
 
-        /* extract genres & types from actual listings (vs. hard-coded) */
+        /* extract genres & types from actual listings (not hard-coded) */
         addCategories( d.show.genres, d.show.type );
 
         return {
@@ -67,7 +67,8 @@ export const getListings = ( filter ) => {
           title: d.show.name,
           imageUrl: d.show.image ? d.show.image.medium || null : null,
           description: d.show.summary,
-          genres: d.show.genres
+          genres: d.show.genres,
+          type: d.show.type
         };
 
       });
@@ -86,17 +87,9 @@ const createQueryString = ( filter ) => {
 
 const filtered = ( allListings, filter ) => {
 
-  /* TODO: handle zero length results,
-           enable selecting multiple genres
-           DRY-out references to 'All...'
-  */
-
-  const results = allListings.filter( listing => {
-    console.log('listing.genres:', listing.genres, 'filter.genre:', filter.genre );
-    return filter.genre === 'All Genres'
-        || listing.genres.indexOf( filter.genre ) > -1;
-  });
-
-  return results;
+  return allListings.filter( listing =>
+       (filter.type === 'Any Type' || listing.type === filter.type )
+    && (filter.genre === 'All Genres' || listing.genres.indexOf( filter.genre ) > -1 )
+  );
 
 };

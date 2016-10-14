@@ -5,18 +5,17 @@ import styles from './listings.css';
 import Program from './program';
 import { getListings } from './datasource'; /* TODO: pass via props! */
 
-const filter = {
-  datetime: new Date(),
-  genre: 'All Genres'
-}
-
 export default class Listings extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      filter: filter,
+      filter: {
+        datetime: new Date(),
+        genre: 'All Genres',
+        type: 'Any Type'
+      },
       listings: []
     }
 

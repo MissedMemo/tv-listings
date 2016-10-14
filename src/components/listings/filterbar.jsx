@@ -16,6 +16,7 @@ export default ({ filter, callback }) => {
     </button>
 
     <div className={ styles.filtersection }>
+
       <select onChange={ e => {
         filter.genre = e.target.value;
         callback( filter );
@@ -24,11 +25,16 @@ export default ({ filter, callback }) => {
           <option value={ g } key={ g }>{ g }</option>
         )
       } </select>
-      <select>{ categories.types.map(
-        type => <option value={ type } key={ type }>
-          { type }
-        </option>
-      )}</select>
+
+      <select onChange={ e => {
+        filter.type = e.target.value;
+        callback( filter );
+      }}> {
+        categories.types.map( t =>
+          <option value={ t } key={ t }>{ t }</option>
+        )
+      } </select>
+      
     </div>
 
     <div className={ styles.filtersection }>
